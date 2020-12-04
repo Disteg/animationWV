@@ -303,14 +303,18 @@ height: 10px;
   height: 25px;
 }
 .bunner__bubble {
+  display: none;
   position: absolute;
   bottom: 115px;
   right: -15px;
 }
+
+
 .bunner__bubble-animate{
   animation: showBubble 2.1s ease;
 }
 .bunner__bubble-active{
+  display: block;
   position: absolute;
   bottom: 115px;
   right: -15px;

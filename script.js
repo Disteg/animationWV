@@ -284,3 +284,6 @@ window.addEventListener("DOMContentLoaded", () => {
   openPopup(".banner__popup", ".popup__open-wrapp");
   muteSound(".video__btn", ".popup__video", ".video__img", ".popup__close");
 });
+
+
+
