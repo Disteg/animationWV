@@ -1,0 +1,343 @@
+/* Page */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+button {
+  outline: none;
+}
+.body {
+  font-family: "VWHead";
+  font-style: 11px;
+  color: #ffffff;
+  position: relative;
+}
+.banner__wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #ffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* @keyframes showBunner{
+    0%{
+        right: -500px;
+        opacity: 0;
+    }
+    100%{
+        right: 0px;
+        opacity: 1;
+    }
+} */
+.banner {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background-image: url(./assets/img/bg-1.jpg);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.banner::after{
+  position: absolute;
+  content: "";
+  background: #222222 url(audio.svg) center center no-repeat;
+}
+.banner-animate{
+  animation: showBanner 1.3s ease;
+}
+
+@keyframes showBanner{
+  0%{
+    left: 100px;
+    opacity: 0;
+  }
+  100%{
+    left: 0px;
+    opacity: 1;
+  }
+}
+.popup__open-wrapp {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  width: 30px;
+  height: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup__open {
+  background: #00b1f2;
+  border-radius: 50%;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: showOpenPopup 2.1s ease;
+}
+.open__media {
+  width: 12px;
+  height: 12px;
+  animation: pulsOpen 2s infinite ease ;
+}
+@keyframes pulsOpen{
+  0% {
+    transform: scale(1);
+  }
+  
+
+  50% {
+    transform: scale(1.6);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+  
+}
+@keyframes showOpenPopup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.banner__popup {
+  position: absolute;
+  top: 2%;
+  left: 1.7%;
+  z-index: 1000;
+  color: #000000;
+  background: #ffff;
+  width: 310px;
+  height: 460px;
+  padding: 20px;
+  display: none;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.popup__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+}
+.close__media {
+  width: 10px;
+  height: 10px;
+}
+.popup__text {
+  font-size: 11px;
+  margin-bottom: 10px;
+  font-family: "VWText";
+}
+.popup__video {
+  width: 275px;
+  height: 345px;
+  margin-bottom: 5px;
+  position: relative;
+}
+.video__btn {
+  position: absolute;
+  background: 0;
+  width: 30px;
+  height: 30px;
+  right: 7%;
+  bottom: 22%;
+}
+.video__img {
+  width: 30px;
+  height: 30px;
+}
+.popup__button {
+  width: 160px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background: #001e50;
+}
+.popup__button-media{
+  background: #ffffff;
+  border-radius: 20px;
+  width: 160px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+}
+.banner__logo {
+  margin-top: 25px;
+}
+.logo__media {
+  width: 320px;
+}
+.banner__content {
+  display: flex;
+  padding: 30px 15px 30px 30px;
+  justify-content: space-between;
+}
+.banner__text {
+  position: relative;
+  animation: showText 2.1s ease;
+}
+.text__strong {
+  width: 155px;
+  height: 63px;
+  animation: showText 2.1s ease;
+}
+.text__span {
+  width: 160px;
+  height: 50px;
+  animation: showText 2.1s ease;
+}
+@keyframes showText {
+  0% {
+    left: 1le0px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+.banner__content-left {
+  display: flex;
+  flex-direction: column;
+}
+.banner__content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+}
+.banner__text {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "VWHead";
+}
+.banner__btn {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 130px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn__media{
+  width: 110px;
+}
+.banner__micro {
+  background: #00b1f2fd;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 0 0 #00b1f2;
+}
+.banner__micro-animate{
+  animation: shadowBtn 2s infinite ease;
+}
+@keyframes shadowBtn {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(44, 193, 204, 0.4);
+    box-shadow: 0 0 0 0 rgba(44, 193, 204, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 15px rgba(44, 193, 204, 0);
+      box-shadow: 0 0 0 15px rgba(44, 193, 204, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(44, 193, 204, 0);
+      box-shadow: 0 0 0 0 rgba(44, 193, 204, 0);
+  }
+}
+.micro__media{
+  fill: #ffffff;
+  margin: auto;
+  height: 50px;
+}
+.micro__media-noaction {
+  height: 50px;
+  width: 50px;
+}
+.micro__media-action{
+width: 40px;
+height: 10px;
+}
+.banner__arrow {
+  background: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.arrow__media {
+  width: 25px;
+  height: 25px;
+}
+.bunner__bubble {
+  position: absolute;
+  bottom: 115px;
+  right: -15px;
+}
+.bunner__bubble-animate{
+  animation: showBubble 2.1s ease;
+}
+.bunner__bubble-active{
+  position: absolute;
+  bottom: 115px;
+  right: -15px;
+  animation: showActiveBubble 2.1s ease;
+}
+
+@keyframes showActiveBubble{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.bubble__media{
+  width: 160px;
+}
+@keyframes showBubble {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.banner__subtext {
+  position: absolute;
+  font-size: 9px;
+  bottom: 1px;
+  left: 30px;
+  font-family: "Arial", sans-serif;
+}
