@@ -99,7 +99,6 @@ button {
     backface-visibility: hidden;
   }
   
-
   50% {
     transform: scale(1.4);
     backface-visibility: hidden;
